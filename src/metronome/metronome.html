@@ -1,0 +1,30 @@
+<ion-view view-title="Metronome"
+          hide-back-button="true">
+    <ion-header-bar class="bar-positive">
+        <button class="button button-icon icon ion-navicon"></button>
+        <h1 class="title">Metronome</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+            <div class="item">
+                <pi-metronome-bpm-selector 
+                    bpm="mc.bpm"
+                    conf="mc.conf"
+                    on-bpm-change="mc.onBpmChange(bpm)">
+                </pi-metronome-bpm-selector>
+            </div>
+
+            <div class="item">
+                <button class="button button-block button-outline button-positive">
+                    Play
+                </button>
+            </div>
+        </div>
+    </ion-content>
+
+    <div class="bar bar-footer">
+        <p>
+            BPM: {{ mc.bpm }}
+        </p>
+    </div>
+</ion-view> 

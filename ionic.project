@@ -1,0 +1,10 @@
+{
+  "name": "metronome",
+  "app_id": "",
+  "gulpStartupTasks": [
+    "babel",
+    "sass",
+    "html",
+    "watch"
+  ]
+}

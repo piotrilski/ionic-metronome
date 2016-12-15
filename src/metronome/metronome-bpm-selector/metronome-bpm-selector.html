@@ -1,0 +1,26 @@
+<div class="list card">
+    <div class="item range">
+        <button class="button button-icon ion-minus"
+                ng-click="mbsc.changeBpm(mbsc.bpm, false)"
+                ng-disabled="mbsc.bpm === mbsc.conf.minBpmValue">
+        </button>
+        <input type="range" 
+               name="bpmInput"
+               ng-model="mbsc.bpm"
+               ng-change="mbsc.onBpmChange({ bpm: mbsc.bpm })"
+               min="{{ mbsc.conf.minBpmValue }}" 
+               max="{{ mbsc.conf.maxBpmValue }}">
+        <button class="button button-icon ion-plus"
+                ng-click="mbsc.changeBpm(mbsc.bpm, true)"
+                ng-disabled="mbsc.bpm === mbsc.conf.maxBpmValue">
+        </button>
+    </div>
+    <div class="item item-body">
+        <label class="item item-input">
+            <span class="input-label">BPM</span>
+            <input type="tel" 
+                   ng-model="mbsc.bpm"
+                   ng-change="mbsc.onBpmChange({ bpm: mbsc.bpm })">
+        </label>
+    </div>
+</div>     
