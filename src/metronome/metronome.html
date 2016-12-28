@@ -15,7 +15,15 @@
             </div>
 
             <div class="item">
-                <button class="button button-block button-outline button-positive">
+                <pi-metronome-note-selector
+                    note="mc.note"
+                    on-note-change="mc.onNoteChange(note)">
+                </pi-metronome-note-selector>
+            </div>
+
+            <div class="item">
+                <button class="button button-block button-outline button-positive"
+                        ng-click="mc.play()">
                     Play
                 </button>
             </div>
@@ -24,7 +32,7 @@
 
     <div class="bar bar-footer">
         <p>
-            BPM: {{ mc.bpm }}
+            BPM: {{ mc.bpm }}, NOTE: {{ mc.note }}
         </p>
     </div>
 </ion-view> 
