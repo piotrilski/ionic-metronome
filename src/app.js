@@ -20,6 +20,6 @@
 					StatusBar.styleDefault();
 				}
 			});
-		})
+		});
 
 })();
